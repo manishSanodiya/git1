@@ -73,10 +73,15 @@ function addItem(e){
     li.appendChild(document.createTextNode(newItem));
 
     let del = document.createElement('button');
+    let ed = document.createElement('button');
+    ed.className = "deleteBtn";
     del.className = "deleteBtn";
     del.appendChild(document.createTextNode("delete"));
+    ed.appendChild(document.createTextNode("edit"));
     li.appendChild(del);
+    li.appendChild(ed);
     itemList.appendChild(li);
+
 
     let obj ={
         name:nameInput.value,
